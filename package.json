@@ -1,0 +1,21 @@
+{
+	"name": "worst-counter5",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types",
+		"db:init": "wrangler d1 execute worst-counter --file='./schema.sql'",
+		"db:init:remote": "wrangler d1 execute worst-counter --file='./schema.sql' --remote"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.8",
+		"@cloudflare/workers-types": "4.20250402.0",
+		"typescript": "^5.0.4",
+		"vitest": "3.0.0",
+		"wrangler": "^4.6.0"
+	}
+}
